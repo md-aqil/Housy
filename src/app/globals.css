@@ -3,8 +3,21 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --card-bg: #f5f5f4;
+  --card-padding-lg: 3.5rem;
+  --card-padding-md: 2.5rem;
+  --card-padding-sm: 1.5rem;
+  --card-radius: 53px;
+  --card-radius-sm: 32px;
+}
+body {
+  background:#1D234F !important;
 }
 
+.h-container {
+  width: 80%;
+  margin:auto;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -23,4 +36,61 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.x-round-card {
+  padding: var(--card-padding-lg);
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+}
+
+@media (max-width: 768px) {
+  .x-round-card {
+    padding: var(--card-padding-md);
+  }
+}
+
+@media (max-width: 640px) {
+  .x-round-card {
+    padding: var(--card-padding-sm);
+    border-radius: var(--card-radius-sm);
+  }
+}
+
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 49px;
+  line-height: 55px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: #050F27;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.x-round-card {
+  min-height: 600px; /* Adjust as needed */
+}
+
+@media (min-width: 1024px) {
+  .x-round-card {
+    min-height: auto;
+    height: 100%;
+  }
 }
