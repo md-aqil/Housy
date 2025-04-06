@@ -113,7 +113,7 @@ const RealEstateSearch = () => {
 
         <div className="relative z-10" ref={dropdownRef}>
           <div className="flex flex-col sm:flex-row sm:items-center bg-white rounded-lg">
-            <div className="w-full p-4">
+            <div className="w-full p-4 ">
               <div className="flex flex-wrap gap-2 mb-2">
                 {selectedOptions.map(option => (
                   <div

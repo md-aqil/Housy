@@ -50,6 +50,12 @@ body {
   .x-round-card {
     padding: var(--card-padding-md);
   }
+
+  .h-container {
+    width: 95%;
+    margin:auto;
+  }
+
 }
 
 @media (max-width: 640px) {
