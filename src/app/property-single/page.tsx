@@ -1,5 +1,4 @@
 'use client' // ✅ This ensures it's a client-side component
-import { CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 

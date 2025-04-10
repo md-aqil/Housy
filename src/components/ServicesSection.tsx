@@ -37,8 +37,9 @@ const ServicesSection = () => {
       colorClass: "from-green-50 to-green-100",
       buttonText: "Coming Soon"
     },
+    
     {
-     
+      id: 4,
       title: "Fractional Ownership",
       description: "Coming Soon",
       icon: "🏢",

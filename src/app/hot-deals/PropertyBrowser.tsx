@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button';
 import {
   Collapsible,
   CollapsibleContent,
-  CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 
 // Define the data structure for a category

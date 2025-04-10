@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Header from "./Header";
 import { motion, AnimatePresence } from "framer-motion";
+import Navbar from "./Navbar";
 
 const Hero: React.FC = () => {
   const [selectedCity, setSelectedCity] = useState<string>("Select City");
@@ -91,14 +92,17 @@ const Hero: React.FC = () => {
 
   return (
     <>
-     
+       
+       <Header />
+       
       <div className=" py-6 w-full bg-blue-950">
-        <Header />
+       
+      
 
-        <section className="flex flex-col items-center my-15 text-center" aria-labelledby="hero-heading">
+        <section className="flex flex-col items-center m-8 text-center" aria-labelledby="hero-heading">
           <motion.h1
             id="hero-heading"
-            className="mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.2] md:leading-[56px] lg:leading-[74px] max-w-full md:max-w-[1017px]"
+            className="my-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.2] md:leading-[56px] lg:leading-[74px] max-w-full md:max-w-[1017px]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -116,7 +120,7 @@ const Hero: React.FC = () => {
           </motion.p>
 
           <motion.div
-            className="relative flex flex-col md:flex-row items-center pl-4 md:pl-8 bg-white shadow-2xl rounded-2xl md:rounded-[70px] w-full max-w-[945px] h-[80]"
+            className="relative flex flex-col md:flex-row items-center pl-4 md:pl-8 bg-white shadow-2xl rounded-2xl md:rounded-[70px] w-full max-w-[945px] h-[80] mobile-search"
             ref={searchRef}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

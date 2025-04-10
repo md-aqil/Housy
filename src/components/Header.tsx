@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
+import Link from 'next/link';
+import Image from 'next/image';
+
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -105,21 +108,23 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="py-4 h-container">
-      <nav className="relative flex items-center justify-between flex-wrap bg-[#ffffff1a] rounded-full py-4 px-6 backdrop-blur-sm">
+    <header className="bg-white shadow-sm sticky top-0 z-50">
+      <nav className="relative flex items-center justify-between flex-wrap bg-[#ffffff1a] shadow-sm  py-3 px-6 backdrop-blur-sm">
         {/* Logo */}
         <div className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
-          <a href="/" className="block">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/8839cf025d5bc19d61fa9cea2980ebd05485c7fe"
-              className="h-10 w-auto"
+          <Link href="/" className="block">
+            <Image
+              src="/logo.png"
+              className="!w-35"
               alt="Housyy Logo"
+             width={200} height={100}
             />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex md:items-center md:gap-8 relative">
+        <div className="hidden md:flex md:items-center md:gap-6 relative">
+          
           {navItems.map((item, index) => {
             const active = index === activeIndex;
             return (
@@ -131,7 +136,7 @@ const Header: React.FC = () => {
                   e.preventDefault();
                   handleNavClick(index, item.href);
                 }}
-                className={`relative text-white text-lg focus:outline-none  rounded-sm px-2 py-2 transition-all duration-300 ${
+                className={`relative text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 ${
                   active ? "font-semibold" : "hover:text-opacity-80"
                 }`}
               >
@@ -142,7 +147,7 @@ const Header: React.FC = () => {
           {/* Animated indicator */}
           <div 
             ref={indicatorRef}
-            className="absolute -bottom-[16px] left-0 h-0.5 bg-red-500 rounded-full transition-all duration-300 ease-in-out"
+            className="absolute -bottom-[20px] left-0 h-0.5 bg-red-500 rounded-full transition-all duration-300 ease-in-out"
           />
         </div>
 
@@ -164,7 +169,7 @@ const Header: React.FC = () => {
             aria-expanded={menuOpen}
             aria-label="Toggle menu"
           >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            {menuOpen ? <X size={24} /> : <Menu className="text-gray-800" size={24} />}
           </button>
         </div>
 

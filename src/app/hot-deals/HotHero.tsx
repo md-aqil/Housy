@@ -1,4 +1,3 @@
-import { Search } from "lucide-react";
 import React from "react";
 import MainSearch from './MainSearch';
 import Header from "@/components/Header";

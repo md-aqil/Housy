@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
-import Image from 'next/image';
 
 export default function PropertyInfo() {
   return (
@@ -37,13 +36,13 @@ export default function PropertyInfo() {
                 className="font-inter text-xl leading-8 text-[#060606] sm:text-2xl sm:leading-9 lg:text-[28px] lg:leading-[40px]"
               >
                 <span className="font-normal">
-                  Imagine finding the perfect home—beautiful, spacious, and in the ideal location. You're ready to take the next step, but a lingering question remains:{' '}
+                  Imagine finding the perfect home—beautiful, spacious, and in the ideal location. You are ready to take the next step, but a lingering question remains:{' '}
                 </span>
                 <span className="font-bold">
                   Is this property truly safe to invest in? At Housyy
                 </span>
                 <span className="font-normal">
-                  , we believe that every property transaction should be stress-free and secure. That's why our{' '}
+                  , we believe that every property transaction should be stress-free and secure. Thats why our{' '}
                 </span>
                 <span className="font-bold">Property Verification Services</span>
                 <span className="font-normal">

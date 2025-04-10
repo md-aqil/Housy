@@ -42,32 +42,7 @@ const ProjectOverview = () => {
     },
   };
 
-  const titleVariants = {
-    hidden: { x: -30, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-        duration: 0.5,
-      },
-    },
-  };
-
-  const slideVariants = {
-    hidden: { x: 30, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-        duration: 0.5,
-        delay: 0.2,
-      },
-    },
-  };
+  
 
   return (
     <motion.div

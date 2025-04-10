@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import Head from 'next/head';
 import Image from 'next/image';
 import Header from './Header';
 
@@ -55,10 +54,11 @@ export default function PropertyVerificationHero() {
             transition={{ delay: 0.4 }}
             className="shrink-0 w-full md:w-auto"
           >
-            <img
+            <Image
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/84dec67aa8ce1df77fec54ef6a9111576691df50"
               alt="Property buildings illustration"
               className="w-full md:w-[728px] h-auto md:h-[565px] object-contain"
+              layout="responsive" width={600} height={400}
             />
           </motion.div>
         </div>

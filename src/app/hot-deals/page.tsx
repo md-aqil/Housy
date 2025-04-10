@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import HotHero from './HotHero';
 import PropertyBrowser from "./PropertyBrowser";
 
-import { ArrowRight, ChevronLeft, ChevronRight, Heart, Filter, X } from 'lucide-react';
+import { ArrowRight, Heart, } from 'lucide-react';
 import LiveHotDeals from "@/components/LiveHotDeals";
-
+import ProductCard2 from "@/components/ProductCard2";
 // Sample data for categories
 const categories = [
   {
@@ -231,261 +231,85 @@ const propertiesByCategory = {
   ]
 };
 
+
+
 export default function Home() {
   return (
     <>
+      <HotHero />
 
-<HotHero />
-<div className="h-container x-round-card my-5">
-<PropertyBrowser 
+      <div className="h-container x-round-card my-5">
+        <PropertyBrowser 
           categories={categories}
           propertiesByCategory={propertiesByCategory}
         />
-</div>
+      </div>
 
-<section className="h-container x-round-card !my-5">
-   {/* Property Grid */}
-
-   <div className="flex justify-between items-center mb-6">
-               <h2 className="text-3xl font-bold">BANK AUCTION PROPERTY</h2>
-               <div className="flex items-center gap-4">
-                 
-                 <button 
-                   className="flex items-center text-primary hover:underline transition-all group"
-                
-                 >
-                   View More
-                   <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                 </button>
-               </div>
-             </div>
-
-   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-              <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-scale-in">
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1080" 
-                    alt="" 
-                    className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <button 
-                    className="absolute top-3 right-3 p-2 rounded-full bg-white/80 hover:bg-white transition-colors duration-200"
-                    aria-label="Add to favorites"
-                  >
-                    <Heart className="h-5 w-5 text-gray-600 hover:text-red-500 transition-colors duration-200" />
-                  </button>
-                 
-                    <div className="absolute bottom-3 left-3 bg-primary px-3 py-1 rounded-full text-white text-xs font-medium">
-                      Featured
-                    </div>
-                 
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-1 line-clamp-1">Title</h3>
-                  <p className="text-gray-500 text-sm mb-2 line-clamp-1">Location</p>
-                  <div className="flex justify-between items-center mt-3">
-                    <p className="text-primary font-bold">$300</p>
-                    <div className="flex items-center space-x-3 text-sm text-gray-500">
-                    <span>beds</span>
-                    <span>baths</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-scale-in">
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1080" 
-                    alt="" 
-                    className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <button 
-                    className="absolute top-3 right-3 p-2 rounded-full bg-white/80 hover:bg-white transition-colors duration-200"
-                    aria-label="Add to favorites"
-                  >
-                    <Heart className="h-5 w-5 text-gray-600 hover:text-red-500 transition-colors duration-200" />
-                  </button>
-                 
-                    <div className="absolute bottom-3 left-3 bg-primary px-3 py-1 rounded-full text-white text-xs font-medium">
-                      Featured
-                    </div>
-                 
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-1 line-clamp-1">Title</h3>
-                  <p className="text-gray-500 text-sm mb-2 line-clamp-1">Location</p>
-                  <div className="flex justify-between items-center mt-3">
-                    <p className="text-primary font-bold">$300</p>
-                    <div className="flex items-center space-x-3 text-sm text-gray-500">
-                    <span>beds</span>
-                    <span>baths</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-scale-in">
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1080" 
-                    alt="" 
-                    className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <button 
-                    className="absolute top-3 right-3 p-2 rounded-full bg-white/80 hover:bg-white transition-colors duration-200"
-                    aria-label="Add to favorites"
-                  >
-                    <Heart className="h-5 w-5 text-gray-600 hover:text-red-500 transition-colors duration-200" />
-                  </button>
-                 
-                    <div className="absolute bottom-3 left-3 bg-primary px-3 py-1 rounded-full text-white text-xs font-medium">
-                      Featured
-                    </div>
-                 
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-1 line-clamp-1">Title</h3>
-                  <p className="text-gray-500 text-sm mb-2 line-clamp-1">Location</p>
-                  <div className="flex justify-between items-center mt-3">
-                    <p className="text-primary font-bold">$300</p>
-                    <div className="flex items-center space-x-3 text-sm text-gray-500">
-                    <span>beds</span>
-                    <span>baths</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-           
+      {/* Section: Bank Auction Property */}
+      <section className="h-container x-round-card !my-5">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-3xl font-bold">BANK AUCTION PROPERTY</h2>
+          <div className="flex items-center gap-4">
+            <button className="flex items-center text-primary hover:underline transition-all group">
+              View More
+              <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
-</section>
+        </div>
 
-<section className="h-container x-round-card !my-5">
-   {/* Property Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {propertiesByCategory["bank-auction"].map((property) => (
+            <ProductCard2
+              key={property.id}
+              title={property.title}
+              location={property.location}
+              image={property.image}
+              price={property.price}
+              bedrooms={property.bedrooms}
+              bathrooms={property.bathrooms}
+              isFeatured={property.isFeatured}
+            />
+          ))}
+        </div>
+      </section>
 
-   <div className="flex justify-between items-center mb-6">
-               <h2 className="text-3xl font-bold">NEWLY LAUNCHED PROPERTY</h2>
-               <div className="flex items-center gap-4">
-                 
-                 <button 
-                   className="flex items-center text-primary hover:underline transition-all group"
-                
-                 >
-                   View More
-                   <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                 </button>
-               </div>
-             </div>
-
-   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-              <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-scale-in">
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1080" 
-                    alt="" 
-                    className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <button 
-                    className="absolute top-3 right-3 p-2 rounded-full bg-white/80 hover:bg-white transition-colors duration-200"
-                    aria-label="Add to favorites"
-                  >
-                    <Heart className="h-5 w-5 text-gray-600 hover:text-red-500 transition-colors duration-200" />
-                  </button>
-                 
-                    <div className="absolute bottom-3 left-3 bg-primary px-3 py-1 rounded-full text-white text-xs font-medium">
-                      Featured
-                    </div>
-                 
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-1 line-clamp-1">Title</h3>
-                  <p className="text-gray-500 text-sm mb-2 line-clamp-1">Location</p>
-                  <div className="flex justify-between items-center mt-3">
-                    <p className="text-primary font-bold">$300</p>
-                    <div className="flex items-center space-x-3 text-sm text-gray-500">
-                    <span>beds</span>
-                    <span>baths</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-scale-in">
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1080" 
-                    alt="" 
-                    className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <button 
-                    className="absolute top-3 right-3 p-2 rounded-full bg-white/80 hover:bg-white transition-colors duration-200"
-                    aria-label="Add to favorites"
-                  >
-                    <Heart className="h-5 w-5 text-gray-600 hover:text-red-500 transition-colors duration-200" />
-                  </button>
-                 
-                    <div className="absolute bottom-3 left-3 bg-primary px-3 py-1 rounded-full text-white text-xs font-medium">
-                      Featured
-                    </div>
-                 
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-1 line-clamp-1">Title</h3>
-                  <p className="text-gray-500 text-sm mb-2 line-clamp-1">Location</p>
-                  <div className="flex justify-between items-center mt-3">
-                    <p className="text-primary font-bold">$300</p>
-                    <div className="flex items-center space-x-3 text-sm text-gray-500">
-                    <span>beds</span>
-                    <span>baths</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-scale-in">
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1080" 
-                    alt="" 
-                    className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <button 
-                    className="absolute top-3 right-3 p-2 rounded-full bg-white/80 hover:bg-white transition-colors duration-200"
-                    aria-label="Add to favorites"
-                  >
-                    <Heart className="h-5 w-5 text-gray-600 hover:text-red-500 transition-colors duration-200" />
-                  </button>
-                 
-                    <div className="absolute bottom-3 left-3 bg-primary px-3 py-1 rounded-full text-white text-xs font-medium">
-                      Featured
-                    </div>
-                 
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-1 line-clamp-1">Title</h3>
-                  <p className="text-gray-500 text-sm mb-2 line-clamp-1">Location</p>
-                  <div className="flex justify-between items-center mt-3">
-                    <p className="text-primary font-bold">$300</p>
-                    <div className="flex items-center space-x-3 text-sm text-gray-500">
-                    <span>beds</span>
-                    <span>baths</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-           
+      {/* Section: Newly Launched Property */}
+      <section className="h-container x-round-card !my-5">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-3xl font-bold">NEWLY LAUNCHED PROPERTY</h2>
+          <div className="flex items-center gap-4">
+            <button className="flex items-center text-primary hover:underline transition-all group">
+              View More
+              <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
-</section>
+        </div>
 
-<section className="my-5">
-  <LiveHotDeals />
-</section>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {propertiesByCategory["newly-launched"].map((property) => (
+            <ProductCard2
+              key={property.id}
+              title={property.title}
+              location={property.location}
+              image={property.image}
+              price={property.price}
+              bedrooms={property.bedrooms}
+              bathrooms={property.bathrooms}
+              isFeatured={property.isFeatured}
+            />
+          ))}
+        </div>
+      </section>
 
+      {/* Live Hot Deals */}
+      <section className="my-5">
+        <LiveHotDeals />
+      </section>
 
-<section className="">
-<Footer />
-</section>
+      {/* Footer */}
+      <section>
+        <Footer />
+      </section>
     </>
-   
-    
-   
   );
 }

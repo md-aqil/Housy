@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Bus, ShoppingCart, School, HeartPulse, Train } from 'lucide-react';
+import { MapPin, ShoppingCart, School, HeartPulse, Train } from 'lucide-react';
 
 const ConnectivitySection = () => {
   const connectivityCards = [

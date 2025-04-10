@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from 'next/image';
+
 
 const testimonials = [
   {
@@ -42,7 +44,6 @@ const testimonials = [
 ];
 
 const CARD_WIDTH = 340; // card width + margin
-const VISIBLE_CARDS = 3;
 
 const TestimonialCarousel = () => {
   const [index, setIndex] = useState(0);
@@ -70,7 +71,7 @@ const TestimonialCarousel = () => {
       <div className="max-w-7xl mx-auto">
         
           <h2 className="title">
-            Our <span className="text-red-600">Customers</span> Think We're the Best
+            Our <span className="text-red-600">Customers</span> Think We are the Best
           </h2>
        
 
@@ -95,15 +96,16 @@ const TestimonialCarousel = () => {
                   className="bg-white rounded-2xl shadow-md p-6 hover:scale-[1.02] transition-transform"
                 >
                   <div className="flex justify-between items-start mb-4">
-                    <span className="text-3xl text-red-600 font-serif">"</span>
+                    <span className="text-3xl text-red-600 font-serif">&quot;</span>
                     {renderStars()}
                   </div>
                   <p className="text-gray-700 text-sm mb-10">{testimonial.quote}</p>
                   <div className="flex items-center">
-                    <img
+                    <Image
                       src={testimonial.avatar}
                       alt={testimonial.author}
                       className="w-10 h-10 rounded-full mr-3"
+                     width={600} height={400}
                     />
                     <div>
                       <h4 className="text-base font-semibold text-gray-900">

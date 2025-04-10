@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "@/components/Hero";
 import Challenges from "@/components/Challenges";
 import WhyUsSection from "@/components/WhyUsSection";

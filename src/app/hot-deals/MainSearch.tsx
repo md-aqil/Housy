@@ -246,14 +246,7 @@ const RealEstateSearch = () => {
   );
 };
 
-// Icons
-const HomeIcon = () => <span>🏠</span>;
-const RentIcon = () => <span>🔑</span>;
-const NewProjectIcon = () => <span>🏗️</span>;
-const PgIcon = () => <span>🛏️</span>;
-const LandIcon = () => <span>🌳</span>;
-const CommercialIcon = () => <span>🏢</span>;
-const AgentIcon = () => <span>👔</span>;
+
 const FiX = ({ size = 16 }) => <span style={{ fontSize: size }}>❌</span>;
 const FiCheck = ({ size = 16 }) => <span style={{ fontSize: size }}>✔️</span>;
 

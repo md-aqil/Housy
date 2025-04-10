@@ -1,13 +1,13 @@
 'use client'
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Head from 'next/head';
 import Header from '@/components/Header';
+import Image from 'next/image';
+
 
 const PropertySlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fullscreen, setFullscreen] = useState(false);
-  const [expandedThumbs, setExpandedThumbs] = useState(false);
   const constraintsRef = useRef(null);
 
   const properties = [
@@ -34,7 +34,7 @@ const PropertySlider = () => {
     // Add more properties as needed
   ];
 
-  const thumbnails = Array(20).fill(0).map((_, i) => `/home-1.png`);
+  const thumbnails = Array(20).fill(0).map(() => `/home-1.png`);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % properties.length);
@@ -46,10 +46,6 @@ const PropertySlider = () => {
 
   const toggleFullscreen = () => {
     setFullscreen(!fullscreen);
-  };
-
-  const toggleThumbnailExpansion = () => {
-    setExpandedThumbs(!expandedThumbs);
   };
 
   return (
@@ -99,10 +95,11 @@ const PropertySlider = () => {
               className="w-full h-full  cursor-pointer overflow-hidden rounded-4xl"
               onClick={toggleFullscreen}
             >
-              <img 
+              <Image 
                 src={properties[currentIndex].image} 
                 alt={`Property ${currentIndex + 1}`}
                 className="w-full h-full object-cover "
+                layout="responsive" width={600} height={400}
               />
             </motion.div>
             
@@ -224,7 +221,8 @@ const PropertySlider = () => {
                 className="w-full h-full relative flex items-center justify-center"
                 onClick={toggleFullscreen}
               >
-                <img 
+                <Image 
+                layout="responsive" width={600} height={400}
                   src={properties[currentIndex].image} 
                   alt={`Property ${currentIndex + 1}`}
                   className="w-full h-full object-contain"
@@ -258,9 +256,10 @@ const PropertySlider = () => {
                       setCurrentIndex(index % properties.length);
                     }}
                   >
-                    <img 
+                    <Image 
                       src={thumb} 
                       alt={`Thumbnail ${index + 1}`}
+                      layout="responsive" width={600} height={400}
                       className="w-full h-full object-cover"
                     />
                   </motion.div>
